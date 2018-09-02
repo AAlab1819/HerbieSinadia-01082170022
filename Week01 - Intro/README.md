@@ -10,7 +10,7 @@ numerator and denominator equals to the number inserted. The numerator and denom
 common divisors except 1)
 
 My solution to this problem is by performing operations depending on the number. First, I create two variables 'a' (the numerator) 
-and 'b' (the denominator). Then we go through an "if-else" statement depending whether the numberis even or odd.
+and 'b' (the denominator). Then we go through an "if-else" statement depending whether the number is even or odd.
 
 If the number is even, we get the numerator by dividing the original number by 2 and then subtracting it by 1 (a = (num/2)-1).
 The denominator is then obtained by dividing the number by 2 and then adding it by 1 (b = (num/2)+1). In most cases, the numerator
