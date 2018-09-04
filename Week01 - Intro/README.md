@@ -24,7 +24,7 @@ variable, so we only get an integer value rather than a float/double -> 13/2 == 
 
 ----------------------------------------------------------------------
 Problem 912 A - Tricky Alchemy
-Submission link: http://codeforces.com/contest/912/submission/42445597
+Submission link: http://codeforces.com/contest/912/submission/42445771
 
 Explanation:
 (coming soon ^_^)
