@@ -22,3 +22,9 @@ But we're looking for coprime numbers, so I added another operation for the nume
 As for odd numbers, it's much more simple and straightforward. We get the numerator by dividing the number by 2 (it's an integer
 variable, so we only get an integer value rather than a float/double -> 13/2 == 6 || a = (num / 2)). Since it's an odd number, the numerator will always be odd/coprime number. The denominator is obtained by adding the numerator value by 1 (b = a + 1).
 
+----------------------------------------------------------------------
+Problem 912 A - Tricky Alchemy
+Submission link: http://codeforces.com/contest/912/submission/42445597
+
+Explanation:
+(coming soon ^_^)
