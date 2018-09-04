@@ -54,3 +54,12 @@ Additional notes:
 
 * I use ```long long``` to declare the variables as Codeforces tests the program using really long numbers such as ```12345678```, ```87654321```, ```1000000000```, etc. Using ```int``` results in a memory overload error.
 * Actual formula for green balls = ```GREENBALL = YELLOWCRYSTAL + BLUECRYSTAL```. I seperated the formula into two (yellow and blue) for convenient purposes
+
+---------------------------------------------
+Problem 988 A - Diverse Team
+
+Submission link: http://codeforces.com/contest/988/submission/42466488
+
+Explanation:
+
+Coming soon :)
