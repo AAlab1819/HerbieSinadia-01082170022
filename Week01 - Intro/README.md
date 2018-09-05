@@ -62,10 +62,29 @@ Submission link: http://codeforces.com/contest/988/submission/42466488
 
 Explanation:
 
-*WORK IN PROGRESS
-
 The question asks us to create a program in which we first input the amount of students, desired team size. Then we input the ratings for each individual student for n times (```n``` = amount of students). The program will later output whether a team can be formed based on the team size and student ratings (no team member shares the same rating). If a valid team can be formed, the program will output ```YES``` followed by the student number (```n```th student, ```n``` = valid student). Else, output ```NO```.
 
 My solution to this problem uses a combination of array and stacks (data structures). First, I declare ```struct node``` and basic push, pop, and print functions which will be used when the program runs in the ```main``` function.
 
-In the ```main``` function, first I declare the stack which is empty at the beginning (```struct node *top = NULL```), number fo students, desired team size, and student rating. The program will ask users to input the number of students and team size. Then we input the rating for each individual student 
+In the ```main``` function, first I declare the stack which is empty at the beginning (```struct node *top = NULL```), number fo students, desired team size, and student rating. The program will ask users to input the number of students and team size. Then we input the rating for each individual student.
+
+Now the program will look for duplicates in the rating array ```studentrating```. Using two ```for``` loops, we compare two different values ```studentrating[p]``` and ```studentrating[q]```. We compare array values in position ```p``` with ```q```. Position ```q``` is always ahead of ```p```, therefore, the comparison formula is ```studentrating[p] == studentrating[q+1]```. ```q``` loop will perform ```number_of_students``` times, comparing the current value at array position ```p``` with all values ahead of it before ```p``` adds by 1 (compare position ```p+1``` with q). Repeat untul the whole array is traversed. If any duplicates were found, the value found in ```studentrating[q]``` will be replaced by 0 to mark that the value in the array is a duplicate/invalid. Loop length = ```(number_of_students-1)*(q-number_of_students-1)```
+
+Once we set all duplicates to 0, the program will enter another ```for``` loop which will insert all non-duplicate students (the ```n```'th student, not their ratings) into the stack. 
+
+```
+top = (struct node*)malloc(sizeof(struct node));
+top->next = NULL;                
+top->data = x+1;            
+validmembercount++;  
+```
+
+By default, the first student in the group is always valid since their duplicates further in the array (if there are any) will set to zero. The stack is empty at first, so we declare the stack into the memory and insert student 1 into the stack. The valid member count increases as a result. The loop progresses, if ```studentrating[x]``` is not 0, we push value ```x``` into the stack and increase the valid member count. Continue looping until the whole array has been traversed (looping time = depends on the number of students)
+
+Finally, we check whether a valid team can be formed depending on the ratings and the desired team size. To determine it, we check the valid member count. If it is higher or equal to the team size, we output ```YES``` and proceed to print out the stack. If the valid member count exceeds the team size, the program will pop ```validmembercount - teamSize``` numbers from the stack (using a ```for```loop, loop length = ```validmembercount - teamSize```) so that the amount of numbers in the stack equals to the team size. If the valid member count is less than the desired team size, output ```NO```.
+
+Additional notes:
+
+* I used stacks because my previous attempts using arrays always result in the program outputting some weird random numbers, should've checked properly I guess ^_^
+* ```validmembercount``` starts with 0 by default
+* All array sizes depends on the user inputs
