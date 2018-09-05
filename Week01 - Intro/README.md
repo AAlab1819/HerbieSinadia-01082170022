@@ -52,8 +52,8 @@ We calculate each required crystals individually and sum the two ball counters t
 
 Additional notes:
 
-* I use ```long long``` to declare the variables as Codeforces tests the program using really long numbers such as ```12345678```, ```87654321```, ```1000000000```, etc. Using ```int``` results in a memory overload error.
-* Actual formula for green balls = ```GREENBALL = YELLOWCRYSTAL + BLUECRYSTAL```. I seperated the formula into two (yellow and blue) for convenient purposes
+* I used ```long long``` to declare the variables because Codeforces tests the program using really long numbers such as ```12345678```, ```87654321```, ```1000000000```, etc. Using ```int``` or just ```long``` results in a memory overload error according to the testing diagnostics.
+* Actual formula for green balls = ```GREENBALL = YELLOWCRYSTAL + BLUECRYSTAL```. I seperated the formula into two (yellow and blue) for convenience purposes
 
 ---------------------------------------------
 Problem 988 A - Diverse Team
@@ -62,4 +62,10 @@ Submission link: http://codeforces.com/contest/988/submission/42466488
 
 Explanation:
 
-Coming soon :)
+*WORK IN PROGRESS
+
+The question asks us to create a program in which we first input the amount of students, desired team size. Then we input the ratings for each individual student for n times (```n``` = amount of students). The program will later output whether a team can be formed based on the team size and student ratings (no team member shares the same rating). If a valid team can be formed, the program will output ```YES``` followed by the student number (```n```th student, ```n``` = valid student). Else, output ```NO```.
+
+My solution to this problem uses a combination of array and stacks (data structures). First, I declare ```struct node``` and basic push, pop, and print functions which will be used when the program runs in the ```main``` function.
+
+In the ```main``` function, first I declare the stack which is empty at the beginning (```struct node *top = NULL```), number fo students, desired team size, and student rating. The program will ask users to input the number of students and team size. Then we input the rating for each individual student 
