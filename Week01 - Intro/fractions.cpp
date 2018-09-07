@@ -17,7 +17,7 @@ int main()
         {
             a-=1;
         }
-        if (b%2 == 0)   //If the denominator is even (see above - what we need is a coprime number)
+        if (b%2 == 0)   //If the denominator is even (see above - what we need is coprime numbers - both values have differing GCD)
         {
             b+=1;      
         }
