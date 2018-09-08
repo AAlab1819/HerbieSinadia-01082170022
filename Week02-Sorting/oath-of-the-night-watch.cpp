@@ -2,33 +2,7 @@
 using namespace std;
 
 //Function to sort stewards by their strength (using selection sort)
-void selectionSort(long long arr[], long long n)
-{
-    long long temp;
-    long long num;
-    long long minimum;
 
-    //Sorting process
-	for (int f = 0; f < n-1; f++)
-    {
-        minimum = arr[f];           //Set current array value as the minimum number
-        num = f;                    //Set num as the current loop index
-        
-        //Check if there are any other array values lower than the minimum value
-        for (int g = f+1; g < n; g++)
-        {
-            //If found
-            if (minimum > arr[g])
-            {
-                minimum = arr[g];           //Set current minimum as the current array value
-                num = g;
-            }
-        }
-        temp = arr[f];              //Set temp as the current array value
-        arr[f] = arr[num];          //Set array value at index f as array value at index num
-        arr[num] = temp;            //Set arr[num] as the current temporary value
-    }
-}
 
 int main()
 {
@@ -39,6 +13,10 @@ int main()
 
     int minvalueset = 0;              //To check whether the minimum value has been set
     int validcount = 0;               //Valid stewards
+
+    long long temp;
+    long long num;
+    long long minimum;
 
     bool timelimit = false;           //If false, sort array
 
@@ -80,7 +58,24 @@ int main()
     //If the number of stewards is less than 1000
     if (timelimit == false)
     {
-        selectionSort(stewArray,stewards);          //Sort the array using selection sort
+        //Sorting process
+        for (int f = 0; f < stewards-1; f++)
+        {
+            minimum = stewArray[f];
+            num = f;
+
+            for (int g = f+1; g < stewards; g++)
+            {
+                if (minimum > stewArray[g])
+                {
+                    minimum = stewArray[g];
+                    num = g;
+                }
+            }
+            temp = stewArray[f];
+            stewArray[f] = stewArray[num];
+            stewArray[num] = temp;
+        }
     }
 
     cout << endl;
