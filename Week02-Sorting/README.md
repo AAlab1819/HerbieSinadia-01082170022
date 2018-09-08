@@ -2,7 +2,7 @@ Weekly Submission 02
 --------------------------
 Problem 768A - Oath of the Night's Watch
 
-Submission link: http://codeforces.com/problemset/submission/768/42664068
+Submission link: http://codeforces.com/contest/768/submission/42664485
 
 Sorting method used: Selection Sort
 
