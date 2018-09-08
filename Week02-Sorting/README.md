@@ -10,7 +10,7 @@ The problem asks us to input the amount of stewards, followed by their strength 
 
 My program will ask users to input the amount of stewards. Then, the user must input the strength for the ```n```th steward in a loop for ```m``` times (```m``` = number of stewards, ```m``` = loop index - starts from ```0```). The strength values are stored in an array.
 
-If the amount of stewards exceed ```1000```, we set the ```timelimit``` boolean variable to ```true``` to avoid time limit issues within Codeforces.
+If the amount of stewards exceed ```1000```, we set the ```timelimit``` boolean variable to ```true``` and bypass the sorting section entirely to avoid time limit issues within Codeforces.
 
 If the number of stewards doesn't exceed ```1000```, the program will then sort the values stored in the array using selection sort.
 
