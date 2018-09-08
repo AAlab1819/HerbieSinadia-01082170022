@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-//Function to sort stewards by their strength (using selection sort)
-
-
 int main()
 {
     long long stewards;               //Number of stewards
