@@ -25,7 +25,7 @@ Additional notes
 --------------------------
 Problem 291A - Spyke Talks
 
-Submission link: http://codeforces.com/problemset/submission/291/42728335
+Submission link: http://codeforces.com/problemset/submission/291/42729021
 
 Sorting method used: Merge Sort
 
