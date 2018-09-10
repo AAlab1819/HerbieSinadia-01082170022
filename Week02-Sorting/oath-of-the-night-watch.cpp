@@ -1,6 +1,75 @@
 #include <iostream>
 using namespace std;
 
+//Function to merge back array after splitting them in fuction "mergesort"
+void mergeback (long long *arr, long long low, long long high, long long mid)
+{
+    long long a;
+    long long b;
+    long long c;
+    long long d[high-low+1];          //Temporary array
+
+    a = low;            //Lower part
+    c = 0;              //Index for checking
+    b = mid+1;          //Higher part
+
+    //Merge the two parts to the temporary array d[]
+    while (a <= mid && b <= high)
+    {
+        if (arr[a] < arr[b])
+        {
+            d[c] = arr[a];
+            c++;
+            a++;
+        }
+        else
+        {
+            d[c] = arr[b];
+            c++;
+            b++;
+        }
+    }
+
+    //Insert values from i to mid into d[]
+    while (a <= mid)
+    {
+        d[c] = arr[a];
+        c++;
+        a++;
+    }
+
+    //Insert values from mid to high into d[]
+    while (b <= high)
+    {
+        d[c] = arr[b];
+        c++;
+        b++;
+    }
+
+    //Construct sorted array based on d[]
+    for (a = low; a <= high; a++)
+    {
+        arr[a] = d[a-low];
+    }
+}
+
+//Function to split arrays (tree)
+void mergesort(long long *arr, long long low, long long high)
+{
+    long long mid;
+    if (low < high)
+    {
+        mid = (low+high)/2;                 //Declare middle part (will be split)
+
+        //Split the array until there is no more to be split
+        mergesort(arr, low, mid);
+        mergesort(arr, mid+1, high);
+
+        
+        mergeback(arr, low, high, mid);         //Merge the array back
+    }
+}
+
 int main()
 {
     long long stewards;               //Number of stewards
@@ -14,16 +83,9 @@ int main()
     long long temp;
     long long num;
     long long minimum;
-
-    bool timelimit = false;           //If false, sort array
-
-    cin >> stewards;                  //Input number of stewards
-
-    if (stewards > 1000)
-    {
-        timelimit = true;             //If stewards exceed 1000, bypass sorting (to avoid time limit issues)
-    }
-
+    
+    cin >> stewards;
+     
     long long stewArray[stewards];    //Declare array of steward strength based on the number of stewards
 
 
@@ -51,33 +113,10 @@ int main()
             minvalue = stewArray[b];            //Set current value as the minimum value
         }
     }
-
-    //If the number of stewards is less than 1000
-    if (timelimit == false)
-    {
-        //Sorting process
-        for (int f = 0; f < stewards-1; f++)
-        {
-            minimum = stewArray[f];
-            num = f;
-
-            for (int g = f+1; g < stewards; g++)
-            {
-                if (minimum > stewArray[g])
-                {
-                    minimum = stewArray[g];
-                    num = g;
-                }
-            }
-            temp = stewArray[f];
-            stewArray[f] = stewArray[num];
-            stewArray[num] = temp;
-        }
-    }
-
-    cout << endl;
-
-    //Checking whether each steward can be supported or not
+    
+    mergesort(stewArray,0,stewards-1);          //Sort the array using merge sort
+    
+     //Checking whether each steward can be supported or not
     for (int y = 0; y < stewards; y++)
     {
         //If the current steward's strength is between the weakest steward and the strongest steward
