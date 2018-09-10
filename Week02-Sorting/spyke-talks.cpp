@@ -65,8 +65,8 @@ void mergesort(int *arr, int low, int high)
         mergesort(arr, low, mid);
         mergesort(arr, mid+1, high);
 
-        //Merge the array back
-        mergeback(arr, low, high, mid);
+        
+        mergeback(arr, low, high, mid);         //Merge the array back
     }
 }
 
@@ -85,7 +85,7 @@ int main()
     //Input array values
     for (int a = 0; a < secretaries; a++)
     {
-        cin >> callSession[a];
+        cin >> callSession[a];          //Input call sessions
     }
 
     mergesort(callSession,0,secretaries-1);             //Sort the array using merge sort
@@ -95,7 +95,7 @@ int main()
     //Check for valid call sessions
     for (int i = 0; i < secretaries-1; i++)
     {
-        //Set the current number value check to 0
+        //Set the current duplicate counter to 0 for each pass of the i loop
         currentcheck = 0;
 
         for (int j = i+1; j < secretaries; j++)
@@ -113,8 +113,9 @@ int main()
         if (currentcheck > 1)
         {
             validsessions = -1;
-            break;
+            break;          //Exit loop
         }
+        //else keep going
     }
     cout << validsessions;              //Print results
 }
