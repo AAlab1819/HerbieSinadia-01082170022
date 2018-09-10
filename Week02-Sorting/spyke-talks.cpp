@@ -3,14 +3,14 @@ using namespace std;
 
 int main()
 {
-    int secretaries;
+    int secretaries;                //Number of secretaries
 
-    int currentcheck = 0;
-    int validsessions = 0;
+    int currentcheck = 0;           //Duplicate counter
+    int validsessions = 0;          //Number of call sessions between two secretaries
     
-    int temp;
-    int num;
-    int minimum;
+    int temp;                       //Temporary number (used in sorting)
+    int num;                        //Used in sorting
+    int minimum;                    //Minimum value used in sorting
 
     cin >> secretaries;                 //Input amount of secretaries
 
@@ -22,7 +22,8 @@ int main()
         cin >> callSession[a];          //Input call sessions
     }
     
-     for (int f = 0; f < secretaries-1; f++)
+    //Sort the array using Selection Sort
+    for (int f = 0; f < secretaries-1; f++)
     {
         minimum = callSession[f];
         num = f;
@@ -65,6 +66,6 @@ int main()
         }
         //else keep going
     }
-    cout << validsessions; //Print results
+    cout << validsessions;          //Print results
     
 }
