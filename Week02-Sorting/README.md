@@ -44,5 +44,17 @@ Once the program checked the entire array, the program will output the amount of
 --------------------------
 Problem 230A - Dragons
 
-Coming soon :)
+Submission link: http://codeforces.com/problemset/submission/230/42802597
+
+Sorting method: Insertion Sort
+
+In this question, we are tasked to create a program in which we simulate a player with user-generated stats (```strength```) against a set nunber of dragons determined by the user (```dragons```). Each dragon have their own strength and bonus which will increase the player's strength should they are able to defeat the dragon (```victorybonus```). The program will print either ```YES``` or ```NO``` depending on the amount of dragons defeated (```YES``` for all, ```NO``` for ```1``` or more dragons unable to be defeated by the player).
+
+First, we input the default player strength followed by the number of dragons. The program will then generate two arrays, ```dragonArray```(to store dragon strength) and ```victorybonus``` (to store strength bonus should the dragon be successfully defeated). The size of those two arrays are based on ```dragons```.
+
+The user can input each dragon's strength and win bonus within a ```for``` loop that will run for ```n``` times (```n``` = ```dragons```). The program will then go to the Insertion Sort function and sort ```dragonArray[]``` based on their strength and append their win bonuses to each individual dragon in the new array (if we don't, the order of victory bonuses remains the same while the order of dragons changes, meaning that each dragon now holds a completely different victory bonus to the one user inputs).
+
+After that, the program checks whether the player can defeat ```y```th dragon in a ```for``` loop (```y``` being the loop index). If the player's strength exceeds the current dragon's strength (```strength > dragonArray[y]```), we add the victory bonus to the current player strength, increase the win counter ```wincount``` and repeat (facing off the player with ```dragonArray[y+1]```). If the player's strength is less than or equal to the current dragon's strength (```strength <= dragonArray[y]```), the game is impossible to be won and the program exits the ```for``` loop using ```break```.
+
+At the end, the program will check the amount of wins to verify whether the game can be won or not. If ```wincount``` equals to ```dragons``` (all dragons can be defeated), print ```YES```. Otherwise, print ```NO```.
 
