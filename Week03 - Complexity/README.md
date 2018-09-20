@@ -35,3 +35,26 @@ Worst case: If all damage types has a value exceeding ```1``` - check individual
 
     T(n) = O(n^2)
    
+-----------------------
+Problem 469 A - I Wanna Be The Guy
+
+Submission link: 
+
+The program we must make must output whether the levels can be completed or not based on the user inputs. The user inputs two variables = ```littleX``` and ```littleY```. 
+
+First, we input the amount of levels (```stage```). The program will declare a ```set``` (a container/array where every element inside it must be unique). Then the user inputs ```littleX``` and ```littleY``` in a ```for``` loop. The user inputs ```littleX``` followed by ```littleY``` as much as the previously entered ```littleX```. Insert ```littleY``` into the set after every input. 
+
+After that, the program will check whether all levels can be passed or not by checking the size of ```set```. If the size equals to the number of levels, the program will print ```I become the guy```. If not, print ```Oh, my keyboard!```
+
+Best case: ```O(n)```
+
+Worst case: ```O(log (n))```
+
+----------------------------
+Problem 492 B - Vanya and the Lanterns
+
+Submission link: https://codeforces.com/problemset/submission/492/43111409
+
+Explanation:
+
+-coming soon-
