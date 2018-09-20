@@ -38,7 +38,7 @@ Worst case: If all damage types has a value exceeding ```1``` - check individual
 -----------------------
 Problem 469 A - I Wanna Be The Guy
 
-Submission link: 
+Submission link: https://codeforces.com/contest/469/submission/43105601
 
 The program we must make must output whether the levels can be completed or not based on the user inputs. The user inputs two variables = ```littleX``` and ```littleY```. 
 
@@ -57,4 +57,22 @@ Submission link: https://codeforces.com/problemset/submission/492/43111409
 
 Explanation:
 
--coming soon-
+First, the program will declare three variables =
+* ```lanterns``` = amount of lanterns
+* ```street_length``` = length of the street
+* ```point``` = lantern positions
+
+The user must input the amount of lanterns within point ```i``` in a ```for``` loop. The input value will go to the array. ```i``` is the loop index - starts from ```0``` all the way to ```lanterns```.
+
+The program will then sort the array using STD sort. After that, we get the light strength by comparing the first entry of the array with ```street_length-array[lanterns-1]*2```.
+
+The program will then go to another ```for``` loop to get the maximum radius needed to light up the whole street. We get the diameter by comparing the current ```point``` with the differences between the current and the next lantern position/point. Once done, the program will set the exact floating value precision by ```20```. The program will output the radius by dividing the diameter (```point```) by ```2```. The number will be a fixed-point notation.
+
+Additional notes:
+*```max``` is used to compare between two distinct variables and return the highest value among the two
+
+Best case: ```O(n)```
+
+Worst case: ```O(log(n))```
+
+
