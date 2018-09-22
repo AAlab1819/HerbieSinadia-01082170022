@@ -36,5 +36,10 @@ The total number of presses is ```14```.
 
 The ```for``` loop will calculate the worst case by pressing all buttons when ```a``` buttons have been pressed. We use the formula:
 ```(buttons - a) * a```
-to calculate the presses needed when ```a``` buttons have been pressed. ```a``` goes up after each operation, meaning that the amount
-of buttons that has been 
+to calculate the presses needed when ```a``` buttons have been pressed. ```a``` goes up after each operation, meaning that the amount of buttons pressed that is the correct answer increases.
+
+Finally, we add the amount of tries with the amount of buttons as the final sequence is pressing all buttons in the right order. Then the program will print out the final total of tries needed.
+
+Complexity:
+
+- coming soon -
