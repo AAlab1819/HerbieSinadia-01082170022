@@ -20,6 +20,8 @@ The order of tries shall be (assuming the correct order is in descending order f
     3 1
     3 2 1
 ```
+(note: numbers represent the ```n```th button)
+
 The total number of presses is ```7```.
 
 If the number of buttons is ```4``` =
