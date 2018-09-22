@@ -11,6 +11,8 @@ The program must output the number of buttons to be pressed in the worst possibl
 After that, the program will go to a ```for``` loop in which the program will count the worst possible tries when ```n```th buttons are
 correctly pressed.
 
+The buttons must be pushed in the right order. If the wrong button is pushed, all buttons will be unpressed. Another guess at the correct sequence will be attempted.
+
 For example = number of buttons is ```3```.
 
 The order of tries shall be (assuming the correct order is in descending order from the last button - Manao presses the buttons in ascending order) :
