@@ -9,15 +9,15 @@ int main()
 
 	cin >> buttons;           //Input number of buttons
 	
-  //Loop to test the worst case when n buttons have been pressed
+  	//Loop to test the worst case when n buttons have been pressed
 	for (int a = 0; a <= buttons-1; a++)
 	{
-	    tries = tries + ((buttons - a) * a);      //Add amount of tries for when n buttons have been pressed
+	    tries = tries + ((buttons - a) * a);      	//Add amount of tries for when n buttons have been pressed
 	}
 	
-	FINAL_TOTAL = tries + buttons;        //Add amount of tries with the amount of buttons
+	FINAL_TOTAL = tries + buttons;       	//Add amount of tries with the amount of buttons
 	
-	cout << FINAL_TOTAL;                  //Print results
+	cout << FINAL_TOTAL;                  	//Print results
 	  
 	return 0;
 }
