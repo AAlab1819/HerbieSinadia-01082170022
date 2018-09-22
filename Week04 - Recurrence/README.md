@@ -13,7 +13,7 @@ correctly pressed.
 
 For example = number of buttons is ```3```.
 
-The order of tries shall be (assuming the correct order is in descending order from the last button) :
+The order of tries shall be (assuming the correct order is in descending order from the last button - Manao presses the buttons in ascending order) :
 ```
     1
     2
