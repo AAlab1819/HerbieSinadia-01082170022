@@ -44,4 +44,6 @@ Finally, we add the amount of tries with the amount of buttons as the final sequ
 
 Complexity:
 
-- coming soon -
+Best case: ```O(1)```
+
+Worst case:```O(n)```
