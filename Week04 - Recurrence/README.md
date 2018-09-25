@@ -48,4 +48,6 @@ Complexity:
 
 Best case: ```O(1)```
 
+Average case: ```O(n)``` - program runtime depends on user input
+
 Worst case:```O(n)```
