@@ -51,3 +51,16 @@ Best case: ```O(1)```
 Average case: ```O(n)``` - program runtime depends on user input
 
 Worst case:```O(n)```
+
+-------------
+Problem 598 D - Igor at the Museum
+
+First, user will input the museum size (```n x m```) where ```n``` represents height and ```m``` represents the width. User also inputs the amount of positions that wants to be checked.
+
+Then user inputs the cells in the ```cells``` array. User inputs either ```*``` or ```.``` for ```m``` times in the current loop index (```n```). After that, the program will check the amount of pictures that can be seen. Go to the ```determine``` function to determine number of pictures that can be seen from the current position (```a``` and ```b```). Print the answer.
+
+Complexity:
+
+Best case : ```O(n^2)```
+
+Worst case: ```O(2n^2)```
