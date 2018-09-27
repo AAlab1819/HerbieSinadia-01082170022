@@ -55,6 +55,8 @@ Worst case:```O(n)```
 -------------
 Problem 598 D - Igor at the Museum
 
+Submission link: https://codeforces.com/problemset/submission/598/43495349
+
 First, user will input the museum size (```n x m```) where ```n``` represents height and ```m``` represents the width. User also inputs the amount of positions that wants to be checked.
 
 Then user inputs the cells in the ```cells``` array. User inputs either ```*``` or ```.``` for ```m``` times in the current loop index (```n```). After that, the program will check the amount of pictures that can be seen. Go to the ```determine``` function to determine number of pictures that can be seen from the current position (```a``` and ```b```). Print the answer.
