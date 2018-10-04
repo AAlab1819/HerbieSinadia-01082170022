@@ -13,3 +13,25 @@ First, the program will declare the database using ```map```. The key value is `
 Complexity:
 
 -coming soon-
+
+------------------------------
+Problem 115 A - Party
+
+Submission link: https://codeforces.com/contest/115/submission/43791751
+
+Explanation:
+
+First, the user inputs the amount of employees in the company that will be attending the party. The program will initialize array ```i``` which will contain the actual employees. Then, the user inputs the immediate manager of employee ```i```. If the inserted value is ```-1```, the employee does not have an immediate manager.
+
+The program will go to another ```for``` loop in which the program will calculate the amount of groups that can be formed by returning the highest value between the current employee index and the current group count. Print the amount of groups at the end.
+
+Complexity:
+
+Worst case: ```O(2n)```
+
+Average case: ```O(2n)```
+
+Best case: ```O(n)```
+
+----------------------------
+
