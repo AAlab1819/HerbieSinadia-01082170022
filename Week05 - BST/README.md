@@ -12,7 +12,11 @@ First, the program will declare the database using ```map```. The key value is `
 
 Complexity:
 
--coming soon-
+Worst case: ```O(n)```
+
+Average case: ```O(n)```
+
+Best case: ```O(1)```
 
 ------------------------------
 Problem 115 A - Party
@@ -34,4 +38,18 @@ Average case: ```O(2n)```
 Best case: ```O(n)```
 
 ----------------------------
+Problem 913 B - Christmas Spruce
 
+Submission link: https://codeforces.com/contest/913/submission/43790616
+
+Explanation:
+
+First, the program will initalize the vector array and the variables needed. The user inputs the amount of vertices in the tree. Then the user must input the index of parent ```i```+1 vortex within a ```for``` loop. Then the program will go to another ```for``` loop to check the amount of children in non-leaf vertices. If the current index is empty (indicating that there are no other descendants), add the counter by ```1```. If the counter is less than ```3```, print ```No``` (the tree is not spruce). Otherwise print ```Yes``` if the counter exceeds ```3```(the tree is spruce).
+
+Complexity:
+
+Worst case: ```O(n)```
+
+Average case: ```O(log (n))```
+
+Best case: ```O(1)```
