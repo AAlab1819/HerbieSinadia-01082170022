@@ -42,7 +42,7 @@ Additional notes:
 
 Complexity
 
-Best case: ```O(n)```
+Best case: ```O(1)```
 
 Average case: ```O(n)```
 
