@@ -25,4 +25,26 @@ Problem 978 B - File Name
 
 Submission link: https://codeforces.com/problemset/submission/978/44770485
 
-- coming soon :) -
+The user must first input the number of characters in the string (```num```). Then, the program will intialize an array of characters ```char input[]``` with the size of ```num```. The user will then input the string in which every individual character will be stored sequentially in the array. Then, the program will check each individual character in a ```for``` loop.
+
+If the current character in the array index is ```x```, increase the ```name_check``` counter by ```1```. If the current character is not ```x```, reset the ```name_check``` counter and add the sum of ```x``` that needs to be removed by ```name_check - 2``` (if the count of consecutive ```x``` is equal to or more than ```3```. Repeat until the loop ends. If there are ```3``` or more consecutive ```x``` when the loop ends (as in, the last character in the array is ```x```, which means the program cannot add it when the loop ends), the program will insert the sum of ```x - 2``` once the loop ends. Finally, the program will print the sum.
+
+Additional notes:
+
+* ```sum += name_check - 2``` because we are looking for the minimum number of ```x``` that needs to be removed so that no ```xxx``` or longer is present in the string. ```2``` is the threshold of accepted consecutive ```x``` in the string, so we reduce the ```name_check``` counter by ```2``` so that we can get the minimum number of ```x``` that needs to be removed in the current sequence of ```x```.
+
+```xxx -> 3 - 2 == 1``` only ```1``` ```x``` needs to be removed so that the number of ```x``` is ```2```
+
+```xxxx -> 4 - 2 == 2```  only ```2``` ```x``` needs to be removed so that the number of ```x``` is ```2```
+
+```xxxxxxxxxx -> 10 - 2 == 8```   only ```8``` ```x``` needs to be removed so that the number of ```x``` is ```2```
+* If the current character is not ```x``` and the number of consecutive ```x``` is less than ```3```, the program will simply reset the ```name_check``` counter.
+
+Complexity
+
+Best case: ```O(n)```
+
+Average case: ```O(n)```
+
+Worst case: ```O(2n)```
+
