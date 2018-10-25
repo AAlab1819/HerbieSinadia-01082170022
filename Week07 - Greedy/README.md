@@ -48,3 +48,18 @@ Average case: ```O(n)```
 
 Worst case: ```O(2n)```
 
+-----------------
+Problem 731 B - Coupons and Discounts
+
+Submission link: https://codeforces.com/contest/731/submission/44844064
+
+First, the user must input the number of training sessions. Then, the program will go to a loop which runs for ```n``` times (```n``` = number of training sessions). In each loop, the user must inpu.t the number of teams that will be present on the ```n```th day. Then, the program will check if they are eligible for discounts or not. If the result of ```teams - check``` is less than ```0```(negative), break the loop and print ```NO```. Else, get the new check number by getting the remainder of ```teams/2```. Print ```YES``` if the loop completes succesfully.
+
+Complexity:
+
+Best case: ```O(1)```
+
+Average case: ```O(n)```
+
+Worst case: ```O(n)```
+
